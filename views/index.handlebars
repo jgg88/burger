@@ -1,7 +1,7 @@
-<h1>Eat-A-Burger</h1>
-
-
-<img src="/assets/img/hamburger.png" width="350px">
+<header>
+	<img src="/assets/img/hamburger.png" width="350px">
+	<h1>Eat-A-Burger</h1>
+</header>
 
 <div class="main-container">
 	<div class="container">
@@ -12,7 +12,7 @@
 						<div>
 							<form action="/burgers/{{this.id}}?_method=PUT" method="POST">
 								{{this.burger_name}}
-								<button type="submit">Devour it!</button>
+								<button type="submit" class="btn">Devour it!</button>
 							</form>
 						</div>
 					{{/unless}}
@@ -37,8 +37,8 @@
 <div class="row">
 	<div class="col s12">
 		<form action="/burgers" method="POST">
-			<input type="text" id="name" name="burger_name" placeholder="Enter a new burger you would like to eat!">
-			<button type="submit" class="createBurger">Submit</button>
+			<input type="text" id="name" name="burger_name"  placeholder="Enter a new burger you would like to eat!">
+			<button type="submit" class="btn">Add to Menu!</button>
 
 		</form>
 	</div>
