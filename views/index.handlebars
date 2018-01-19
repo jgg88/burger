@@ -7,10 +7,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col s6">
+				<h3>To be eaten:</h3>
 				{{#each burgers}}
 					{{#unless this.devoured}}
-						<div>
-							<form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+						<div>							
+							<form action="/burgers/{{this.id}}?_method=PUT" method="POST">				
 								{{this.burger_name}}
 								<button type="submit" class="btn">Devour it!</button>
 							</form>
@@ -20,9 +21,10 @@
 			</div>
 
 			<div class="col s6">
+				<h3>Already eaten:</h3>
 				{{#each burgers}}
 					{{#if this.devoured}}
-						<div class="devoured">
+						<div class="devoured">				
 							<div>
 								{{this.burger_name}}
 							</div>
